@@ -944,6 +944,118 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447362185}
     m_Modifications:
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_Id
+      value: daf2a329-a038-4750-8a1d-d295ef9971cf
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_Name
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[0].m_Id
+      value: e8e3c073-19fc-4d42-b653-80b78d12e7d1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[1].m_Id
+      value: f4492ecc-dd7b-40e4-ae04-261511d19c52
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[2].m_Id
+      value: b9e435e3-fe6a-4af2-9d84-8ca7d1218621
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[3].m_Id
+      value: 4def1326-efa3-43e4-ade5-2733ed310f15
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[4].m_Id
+      value: f5ba7882-b595-4ab1-877b-291dea91277f
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[0].m_Name
+      value: 2D Vector
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[0].m_Path
+      value: 2DVector
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[1].m_Name
+      value: up
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Keyboard>/w
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[2].m_Name
+      value: down
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[2].m_Path
+      value: <Keyboard>/s
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[3].m_Name
+      value: left
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[3].m_Path
+      value: <Keyboard>/a
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[4].m_Name
+      value: right
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[4].m_Path
+      value: <Keyboard>/d
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[0].m_Flags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[1].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[2].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[3].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[4].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[2].m_Action
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[3].m_Action
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 33338404812850194, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[4].m_Action
+      value: Movement
+      objectReference: {fileID: 0}
     - target: {fileID: 5802667694870059873, guid: f07ea4c65a8b99e43baeab69a8b8b393, type: 3}
       propertyPath: m_RootOrder
       value: 0
