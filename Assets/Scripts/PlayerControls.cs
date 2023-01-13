@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] InputAction movement;
+    [SerializeField] float controlSpeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,13 +36,15 @@ public class PlayerControls : MonoBehaviour
         Debug.Log(xMovement);
         Debug.Log(yMovement);
 
-        float xOffset = 0.01f;
+        //multiplying by Time.deltaTime makes it fram rate independent
+        float xOffset = xMovement * Time.deltaTime * controlSpeed;
         float newXPos = transform.localPosition.x + xOffset;
 
+        float yOffset = yMovement * Time.deltaTime * controlSpeed;
+        float newYPos = transform.localPosition.y + yOffset;
+
         transform.localPosition = new Vector3 
-        (newXPos, 
-        transform.localPosition.y, 
-        transform.localPosition.x);
+        (newXPos, newYPos, transform.localPosition.z);
 
 
     
