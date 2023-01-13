@@ -28,11 +28,24 @@ public class PlayerControls : MonoBehaviour
         float xMovement = movement.ReadValue<Vector2>().x;
         float yMovement = movement.ReadValue<Vector2>().y;
 
-        Debug.Log(xMovement);
-        Debug.Log(yMovement);
-
         //old input system
         /* float xMovement = Input.GetAxis("Horizontal");
         float yMovement = Input.GetAxis("Vertical"); */
+
+        Debug.Log(xMovement);
+        Debug.Log(yMovement);
+
+        float xOffset = 0.01f;
+        float newXPos = transform.localPosition.x + xOffset;
+
+        transform.localPosition = new Vector3 
+        (newXPos, 
+        transform.localPosition.y, 
+        transform.localPosition.x);
+
+
+    
+
+
     }
 }
