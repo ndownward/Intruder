@@ -7,6 +7,8 @@ public class PlayerControls : MonoBehaviour
 {
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 10f;
+    [SerializeField] float xRange = 3f;
+    [SerializeField] float yRange = 3.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,13 +40,14 @@ public class PlayerControls : MonoBehaviour
 
         //multiplying by Time.deltaTime makes it fram rate independent
         float xOffset = xMovement * Time.deltaTime * controlSpeed;
-        float newXPos = transform.localPosition.x + xOffset;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
         float yOffset = yMovement * Time.deltaTime * controlSpeed;
-        float newYPos = transform.localPosition.y + yOffset;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
-        transform.localPosition = new Vector3 
-        (newXPos, newYPos, transform.localPosition.z);
+        transform.localPosition = new Vector3 (clampedXPos, clampedYPos, transform.localPosition.z);
 
 
     
