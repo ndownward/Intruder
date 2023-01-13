@@ -11,9 +11,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float yRange = 3.5f;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start(){
     }
 
     void OnEnable() {
@@ -25,15 +23,25 @@ public class PlayerControls : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
+        ProcessRotation();
+        ProcessTranslation();
+    }
+
+    void ProcessRotation() {
+        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+    }
+
+    void ProcessTranslation(){
         //new input system
         float xMovement = movement.ReadValue<Vector2>().x;
         float yMovement = movement.ReadValue<Vector2>().y;
 
         //old input system
-        /* float xMovement = Input.GetAxis("Horizontal");
-        float yMovement = Input.GetAxis("Vertical"); */
+        /*
+        float xMovement = Input.GetAxis("Horizontal");
+        float yMovement = Input.GetAxis("Vertical");
+        */
 
         Debug.Log(xMovement);
         Debug.Log(yMovement);
@@ -48,10 +56,5 @@ public class PlayerControls : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3 (clampedXPos, clampedYPos, transform.localPosition.z);
-
-
-    
-
-
     }
 }
