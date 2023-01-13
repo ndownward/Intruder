@@ -10,6 +10,16 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float xRange = 3f;
     [SerializeField] float yRange = 3.5f;
 
+    [SerializeField] float positionPitchFactor = -10f;
+    [SerializeField] float controlPitchFactor = -5f;
+
+    [SerializeField] float positionYawFactor = 5f;
+
+    [SerializeField] float controlRollFactor = -15f;
+
+    float xMovement, yMovement;
+
+
     // Start is called before the first frame update
     void Start(){
     }
@@ -29,13 +39,22 @@ public class PlayerControls : MonoBehaviour
     }
 
     void ProcessRotation() {
-        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControl = yMovement * controlPitchFactor;
+
+        
+
+        float pitch =  pitchDueToPosition + pitchDueToControl;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xMovement * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     void ProcessTranslation(){
         //new input system
-        float xMovement = movement.ReadValue<Vector2>().x;
-        float yMovement = movement.ReadValue<Vector2>().y;
+        xMovement = movement.ReadValue<Vector2>().x;
+        yMovement = movement.ReadValue<Vector2>().y;
 
         //old input system
         /*
