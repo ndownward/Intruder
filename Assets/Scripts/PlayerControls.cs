@@ -8,14 +8,14 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 3f;
-    [SerializeField] float yRange = 3.5f;
+    [SerializeField] float yRange = 6f;
 
-    [SerializeField] float positionPitchFactor = -10f;
-    [SerializeField] float controlPitchFactor = -5f;
+    [SerializeField] float positionPitchFactor = -14f;
+    [SerializeField] float controlPitchFactor = -14f;
 
-    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float positionYawFactor = 7f;
 
-    [SerializeField] float controlRollFactor = -15f;
+    [SerializeField] float controlRollFactor = -20f;
 
     float xMovement, yMovement;
 
