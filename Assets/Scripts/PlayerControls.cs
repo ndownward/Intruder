@@ -17,6 +17,8 @@ public class PlayerControls : MonoBehaviour
 
     [SerializeField] float controlRollFactor = -20f;
 
+    [SerializeField] InputAction fire;
+
     float xMovement, yMovement;
 
 
@@ -26,23 +28,24 @@ public class PlayerControls : MonoBehaviour
 
     void OnEnable() {
         movement.Enable();
+        fire.Enable();
     }
 
     void OnDisable() {
         movement.Disable();
+        fire.Disable();
     }
 
     // Update is called once per frame
     void Update(){
         ProcessRotation();
         ProcessTranslation();
+        ProcessFiring();
     }
 
     void ProcessRotation() {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pitchDueToControl = yMovement * controlPitchFactor;
-
-        
 
         float pitch =  pitchDueToPosition + pitchDueToControl;
         float yaw = transform.localPosition.x * positionYawFactor;
@@ -62,9 +65,6 @@ public class PlayerControls : MonoBehaviour
         float yMovement = Input.GetAxis("Vertical");
         */
 
-        Debug.Log(xMovement);
-        Debug.Log(yMovement);
-
         //multiplying by Time.deltaTime makes it fram rate independent
         float xOffset = xMovement * Time.deltaTime * controlSpeed;
         float rawXPos = transform.localPosition.x + xOffset;
@@ -75,5 +75,15 @@ public class PlayerControls : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3 (clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void ProcessFiring() {
+        //if pushing firing button
+        //then print "shooting"
+        //else don't print "shooting"
+
+        if (fire.ReadValue<float>() > 0.5) {
+            Debug.Log("Shooting");
+        }
     }
 }
