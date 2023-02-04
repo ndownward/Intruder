@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 261.9017, g: 324.45706, b: 429.4361, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &99516645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8545637338329727546, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+  m_PrefabInstance: {fileID: 8024001250675055420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +398,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1098579527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5342103622642495599, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+  m_PrefabInstance: {fileID: 8024001250675055420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1447362186 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8024001249227711926, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
@@ -601,6 +611,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: fire.m_Id
+      value: e168c6b7-e6ec-4ef0-8910-65f9d30bab6d
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: fire.m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1098579527}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 99516645}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 951d99d1-4dd7-44cd-aeb7-77829e6a55c6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Id
+      value: 27a4f060-cecd-4517-91f1-d5e556c6e9da
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592486663205122322, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Action
+      value: Movement
+      objectReference: {fileID: 0}
     - target: {fileID: 8024001249227711924, guid: 420074234dd42d844acf73d8e20dba86, type: 3}
       propertyPath: m_Name
       value: Player Rig

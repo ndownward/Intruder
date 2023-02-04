@@ -9,18 +9,16 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 3f;
     [SerializeField] float yRange = 6f;
+    [SerializeField] GameObject[] lasers;
 
     [SerializeField] float positionPitchFactor = -14f;
     [SerializeField] float controlPitchFactor = -14f;
-
     [SerializeField] float positionYawFactor = 7f;
-
     [SerializeField] float controlRollFactor = -20f;
 
     [SerializeField] InputAction fire;
 
     float xMovement, yMovement;
-
 
     // Start is called before the first frame update
     void Start(){
@@ -83,7 +81,18 @@ public class PlayerControls : MonoBehaviour
         //else don't print "shooting"
 
         if (fire.ReadValue<float>() > 0.5) {
-            Debug.Log("Shooting");
+            SetLasersActive(true);
         }
+        else {
+            SetLasersActive(false);
+        }
+    }
+
+    void SetLasersActive(bool isActive) {
+        foreach (GameObject laser in lasers){
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
+
     }
 }
